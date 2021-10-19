@@ -28,6 +28,6 @@ public class C05_NegativeTestConfigReader extends TestBase {
         concortHotelPage.password.sendKeys(ConfigReader.getProperty("CHInvalidPassword"));
         concortHotelPage.loginAccount.click();
 
-        Assert.assertTrue(concortHotelPage.wrongLogin.isDisplayed());
+        Assert.assertTrue(concortHotelPage.wrongLoginTextElement.isDisplayed());
     }
 }

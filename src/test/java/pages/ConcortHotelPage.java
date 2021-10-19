@@ -28,7 +28,7 @@ public class ConcortHotelPage {
     public WebElement loginAccount;
 
     @FindBy (xpath = "//*[.='Try again please']")
-    public WebElement wrongLogin;
+    public WebElement wrongLoginTextElement;
 
     @FindBy(xpath="//span[text()='ListOfUsers']")
     public WebElement succesLoginTextElement;
