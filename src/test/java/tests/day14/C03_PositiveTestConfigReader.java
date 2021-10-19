@@ -1,12 +1,12 @@
 package tests.day14;
 
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.ConcortHotelPage;
+import utilities.ConfigReader;
 import utilities.TestBase;
 
-public class C01_ConcortHotelLoginPositive extends TestBase {
+public class C03_PositiveTestConfigReader extends TestBase {
 
 /*
     1) Bir Class olustur : PositiveTest
@@ -20,12 +20,12 @@ public class C01_ConcortHotelLoginPositive extends TestBase {
     @Test
     public void positiveTest() {
 
-        driver.get("https://www.concorthotel.com/");
+        driver.get(ConfigReader.getProperty("CHURL"));
 
         ConcortHotelPage concortHotelPage = new ConcortHotelPage(driver);
         concortHotelPage.loginMenu.click();
-        concortHotelPage.username.sendKeys("manager");
-        concortHotelPage.password.sendKeys("Manager1!");
+        concortHotelPage.username.sendKeys(ConfigReader.getProperty("CHValidUsername"));
+        concortHotelPage.password.sendKeys(ConfigReader.getProperty("CHValidPassword"));
         concortHotelPage.loginAccount.click();
 
         Assert.assertTrue(concortHotelPage.succesLoginTextElement.isDisplayed());

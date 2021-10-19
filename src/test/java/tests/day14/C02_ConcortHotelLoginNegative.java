@@ -26,6 +26,6 @@ public class C02_ConcortHotelLoginNegative extends TestBase {
         concortHotelPage.password.sendKeys("manager1!");
         concortHotelPage.loginAccount.click();
 
-        Assert.assertTrue(concortHotelPage.wrongPassword.isDisplayed());
+        Assert.assertTrue(concortHotelPage.wrongLogin.isDisplayed());
     }
 }
