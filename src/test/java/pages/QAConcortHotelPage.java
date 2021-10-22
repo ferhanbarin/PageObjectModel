@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -111,5 +112,24 @@ public class QAConcortHotelPage {
         qaConcortHotelPage.username.sendKeys(ConfigReader.getProperty("CHValidUsername"));
         qaConcortHotelPage.password.sendKeys(ConfigReader.getProperty("CHValidPassword"));
         qaConcortHotelPage.loginAccount.click();
+    }
+
+    public String printData(int satir, int sutun) {
+
+        // Ornekteki haliyle 3. satir, 5. sütundaki elamani yazdiralim.
+        // String xpath = //tbody//tr[3]//td[5]
+        // Degismeyecek kisimlari String, degisecek kisimlari ise parametre ismi olarak yazdik.
+
+        String xpath = "//tbody//tr["+ satir +"]//td["+ sutun +"]";
+        // System.out.println(xpath);
+
+        // Satir no : 3, Sutun no: 5
+        // System.out.println("Satir no : " + satir + " Sutun no : " + sutun);
+
+        // @FindBy notasyonu parametreli calismadigi icin önceki yöntemle locate edelim.
+        String istenenData = Driver.getDriver().findElement(By.xpath(xpath)).getText();
+        System.out.println("satir no  " + satir + ", sutun no : " + sutun + "'deki data : " + istenenData);
+
+        return istenenData;
     }
 }
