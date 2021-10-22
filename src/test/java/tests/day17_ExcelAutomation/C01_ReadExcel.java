@@ -117,5 +117,7 @@ public class C01_ReadExcel {
         }
 
         System.out.println(ülkelerMap);
+
+        // Biz JAVA method'larini ve collections'i kullanarak excel'deki datalari manipule edebilecegimiz JAVA ortamina alabiliriz.
     }
 }
