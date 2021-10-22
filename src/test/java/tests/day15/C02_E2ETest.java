@@ -29,8 +29,6 @@ public class C02_E2ETest {
     @Test
     public void createHotel() {
 
-        Driver.getDriver().get(ConfigReader.getProperty("CHQAURL"));
-
         QAConcortHotelPage qaConcortHotelPage = new QAConcortHotelPage();
         qaConcortHotelPage.concortHotelLogin();
         qaConcortHotelPage.hotelManagement.click();
