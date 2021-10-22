@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QAConcortHotelPage;
-import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C02_WebTables {
