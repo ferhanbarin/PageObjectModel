@@ -103,7 +103,7 @@ public class C01_ReadExcel {
         // MAP icin UNIQ degerlere sahip bir sütunu key, geriye kalan tüm sütunlari ise virgülle ayrilan String'ler olarak value yapmaliyiz.
         // key=Turkey  value=Ankara, Turkiye, Ankara
 
-        Map<String, String> ülkelerMap = new HashMap<>();
+        Map <String, String> ülkelerMap = new HashMap<>();
         String key = "";
         String value = "";
         for (int i=0; i<=workbook.getSheet("Sayfa1").getLastRowNum(); i++) {
