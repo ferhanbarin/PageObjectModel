@@ -30,12 +30,16 @@ public class C01_WriteExcel {
         FileInputStream fis = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fis);
 
-        workbook.getSheet("Sayfa1").getRow(0).createCell(4).setCellValue("Nüfus");
+        workbook.getSheet("Sayfa1").getRow(0).createCell(4).setCellValue("Nufus");
         workbook.getSheet("Sayfa1").getRow(1).createCell(4).setCellValue(1500000);
         workbook.getSheet("Sayfa1").getRow(9).createCell(4).setCellValue(250000);
         workbook.getSheet("Sayfa1").getRow(14).createCell(4).setCellValue(54000);
 
         FileOutputStream fos = new FileOutputStream(path);
         workbook.write(fos);
+
+        fis.close();
+        fos.close();
+        workbook.close();
     }
 }
