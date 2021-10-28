@@ -12,7 +12,7 @@ public class C01_Pages extends TestBase {
 
     // Amazon sayfasina gidip, "Nutella" icin arama yapin. Sonuc sayisini yazdirin ve sonuc yazisinin "Nutella" icerdigini test edin.
 
-    @Test
+    @Test (groups = "birinciGrup")
     public void test() {
 
         driver.get("https://www.amazon.com/");

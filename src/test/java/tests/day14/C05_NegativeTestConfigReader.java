@@ -17,7 +17,7 @@ public class C05_NegativeTestConfigReader extends TestBase {
     Degerleri girildiginde sayfaya girilemedigini test et.
 */
 
-    @Test
+    @Test (groups = "birinciGrup")
     public void test() {
 
         driver.get(ConfigReader.getProperty("CHURL"));

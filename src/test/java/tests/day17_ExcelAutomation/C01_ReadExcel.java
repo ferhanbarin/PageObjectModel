@@ -70,7 +70,7 @@ public class C01_ReadExcel {
         System.out.println(workbook.getSheet("Sayfa2").getFirstRowNum()); // -1
     }
 
-    @Test
+    @Test (groups = "birinciGrup")
     public void test2() throws IOException {
 
         // Tablodaki 2. sütunu bir liste olarak yazdirin.

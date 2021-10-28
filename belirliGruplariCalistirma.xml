@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Gruplari calistirma">
+    <test name="Grup calistirma">
+        <groups>
+            <run>
+                <include name="birinciGrup"></include>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.day13"></package>
+            <package name="tests.day14"></package>
+            <package name="tests.day17"></package>
+            <!-- Eger farkli farkli cok fazla sayida method'u calistiracaksak tek tek tüm method'lari tanimlamak zor olabilir.
+            Bunun yerine calistirma istedigimiz test methodlarina grup ismi verebiliriz. Burada dikkat etmemiz gerekenler;
+
+              1- xml dosyasi hazirlanirken diger xml'lerden farkli olarak iki hiyerarsi olusturmamiz gerekir. Biri calistirilacak grup veya grup isimleri veya gruplarin
+              kombinasyonlarini belirlemek icin digeri belirlenen kombinasyondaki grup isimlerinin bulundugu yeri göstermek icin.
+              2- Belirledigimiz grup disinda hicbir class veya method calismasina müsaade edilmeyecegi icini dependsOn veya extends gibi keyword'ler ile bagimli olan
+              testler sorun cikarabilir.
+              3- Bir test calisirken diger testin calismasina zarar verebilir. -->
+        </packages>
+    </test>
+</suite>
