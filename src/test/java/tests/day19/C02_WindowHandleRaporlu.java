@@ -27,6 +27,6 @@ public class C02_WindowHandleRaporlu extends TestBaseRapor {
         extentTest.info("Test edecegimiz yazi locate edildi.");
 
         Assert.assertTrue(newWindowTextElement.isDisplayed());
-        extentTest.info("Yazinin görünür oldugu test edildi.");
+        extentTest.pass("Yazinin görünür oldugu test edildi.");
     }
 }
