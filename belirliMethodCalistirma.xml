@@ -2,9 +2,12 @@
 <suite name="Belirli Method Calistirma">
     <test name="Satis Fonksiyonlari Testi">
         <classes>
-            <class name="tests.day13.C03_Pages">
+            <class name="tests.day13.C01_Pages">
                 <methods>
-                    <include name="test"></include>
+                    <exclude name="test"></exclude>
+                    <!-- Calistiracaginiz method sayisi az oldugunda include ile istedigimiz kadar secebiliriz. -->
+                    <!-- Calistirmayacagimiz method sayisi az oldugunda exclude ile istedigimiz kadar secebiliriz. -->
+                    <!-- Include ve Exclude tag'lari istedigimiz kadar alt alta yazilabilir. -->
                 </methods>
             </class>
         </classes>
