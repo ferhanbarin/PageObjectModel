@@ -17,7 +17,8 @@
               kombinasyonlarini belirlemek icin digeri belirlenen kombinasyondaki grup isimlerinin bulundugu yeri göstermek icin.
               2- Belirledigimiz grup disinda hicbir class veya method calismasina müsaade edilmeyecegi icini dependsOn veya extends gibi keyword'ler ile bagimli olan
               testler sorun cikarabilir.
-              3- Bir test calisirken diger testin calismasina zarar verebilir. -->
+              3- Bir test calisirken diger testin calismasina zarar verebilir.
+               (ORN: Herhangi bir web sayfasinda bir defa login olup sonra logout olmazsaniz sonraki testler login yazisini bulamayabilir.) -->
         </packages>
     </test>
 </suite>
