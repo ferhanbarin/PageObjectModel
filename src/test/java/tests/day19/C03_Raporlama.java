@@ -76,7 +76,7 @@ public class C03_Raporlama extends TestBaseRapor {
 
     @Test
     public void test3() {
-        extentTest = extentReports.createTest("JAVA Testi", "Ilk üründe JAVA olmali.")
+        extentTest = extentReports.createTest("JAVA Testi", "Ilk üründe JAVA olmali.");
 
         Driver.getDriver().get(ConfigReader.getProperty("AmazonURL"));
         extentTest.info("Amazon sayfasina gidildi.");
