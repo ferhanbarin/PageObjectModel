@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Degisik özelliklerde testler calistirma">
+<suite name="Degisik özelliklerde testler calistirma" verbose="1">
+    <!-- Eger class, package, method gibi farkli özelliklerde testler calistiracaksam hiyerarsiye dikkat ederek tüm testleri tek tek yazabilirim. -->
     <test name="Farkli cins testler">
         <packages>
             <package name="tests.smokeTest"></package>
