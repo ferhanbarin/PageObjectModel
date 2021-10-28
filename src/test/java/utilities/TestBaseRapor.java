@@ -28,12 +28,12 @@ import java.io.IOException;
             extentReports.setSystemInfo("Enviroment","QA");
             extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
             extentReports.setSystemInfo("Automation Engineer", "Ferhan");
-            extentHtmlReporter.config().setDocumentTitle("amazon Arama Testi");
-            extentHtmlReporter.config().setReportName("amazon Arama Automation Reports");
+            extentHtmlReporter.config().setDocumentTitle("Window Handle Test");
+            extentHtmlReporter.config().setReportName("Window Handle Automation Reports");
         }
 
 
-        // Her test methodundan sonra eğer testte hata varsa, ekran görüntüsü alıp rapora ekliyor
+        // Her test methodundan sonra eğer testte hata varsa, ekran görüntüsü alıp rapora ekliyor.
         @AfterMethod(alwaysRun = true)
         public void tearDownMethod(ITestResult result) throws IOException {
 
