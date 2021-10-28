@@ -26,7 +26,7 @@ import java.util.function.Function;
             TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
             File source = ts.getScreenshotAs(OutputType.FILE);
             // full path to the screenshot location
-            String target = System.getProperty("user.dir") + "/Reports/Screenshots/" + name + date + ".png";
+            String target = System.getProperty("user.dir") + "/Reports/ScreenShots/" + name + date + ".png";
 
             File finalDestination = new File(target);
             // save the screenshot to the path given
