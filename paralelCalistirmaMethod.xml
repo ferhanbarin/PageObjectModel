@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Paralel Class Calistirma" parallel="methods" thread-count="2" verbose="3">
+
+    <!-- Paralel calismada calisacak testlerin secimi ile Driver'lar arasinda görev dönüsümünün hangi seviyede olacagi konusundaki secimin bir bagi yoktur.
+     Calisacak dosyalarin karismamasi icin mümkün oldugunca ayrimi test, package gibi toparlayici sekilde yapmak gerekir. -->
+
+    <test name="Paralel Calisma 1">
+        <classes>
+            <class name="tests.day13.C02_PagesFacebook"></class>
+            <class name="tests.day15.C01_DriverClassKullanimi"></class>
+            <class name="tests.smokeTest.positiveLoginTest"></class>
+            <class name="tests.day16.C02_WebTables"></class>
+        </classes>
+    </test>
+</suite>
