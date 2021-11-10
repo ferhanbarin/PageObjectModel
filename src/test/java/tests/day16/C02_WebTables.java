@@ -33,7 +33,7 @@ public class C02_WebTables {
 
         System.out.println("Tablodaki sütün sayisi : " + qaConcortHotelPage.basliklarListesi.size());
         // Eger tüm tablo body'sini hücrelere ayirmadan tek bir String olarak görmek istersek, tüm body'i tek bir WebElement olarak locate edebiliriz.
-        // Bu yaklasim, tabloda HAPPY HOTEL varmi? gibi sorular icin ideal bir cözüm olur.
+        // Bu yaklasim, tabloda HAPPY HOTEL varmi gibi sorular icin ideal bir cözüm olur.
 
         Thread.sleep(1000);
 
