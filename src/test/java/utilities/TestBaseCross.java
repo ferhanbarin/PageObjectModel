@@ -15,7 +15,6 @@ public abstract class TestBaseCross {
     @BeforeClass
     public void setup(@Optional String browser) {
 
-        WebDriverManager.chromedriver().setup();
         driver = DriverCross.getDriver(browser);
     }
 
