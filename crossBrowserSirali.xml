@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Cross Browser">
+    <test name="Cross Browser Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="crossBrowser.positiveLoginTest"></class>
+        </classes>
+    </test>
+
+    <test name="Cross Browser Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="crossBrowser.positiveLoginTest"></class>
+        </classes>
+    </test>
+
+    <test name="Cross Browser Opera">
+        <parameter name="browser" value="opera"></parameter>
+        <classes>
+            <class name="crossBrowser.positiveLoginTest"></class>
+        </classes>
+    </test>
+
+</suite>
