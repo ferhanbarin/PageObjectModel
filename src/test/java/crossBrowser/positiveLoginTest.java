@@ -1,12 +1,16 @@
 package crossBrowser;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.QAConcortHotelPage;
 import utilities.ConfigReader;
-import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class positiveLoginTest {
+public class positiveLoginTest extends TestBaseCross {
+
+    // Cross Browser testte TestBase class'ina geri dönüyoruz. Bunun sebebi @parameter notasyonunu kullanmak.
+    // Dolayisiyla Driver.getDriver() ve Pages sayfalarindaki locator'lari kullanamayiz.
 
 /*
     Bir test method olustur. positiveLoginTest()
@@ -20,17 +24,16 @@ public class positiveLoginTest {
     @Test
     public void test() {
 
-        Driver.getDriver().get(ConfigReader.getProperty("CHQAURL"));
+        driver.get(ConfigReader.getProperty("CHQAURL"));
 
-        QAConcortHotelPage qaConcortHotelPage = new QAConcortHotelPage();
+        driver.findElement(By.linkText("Log in")).click();
 
-        qaConcortHotelPage.loginMenu.click();
-        qaConcortHotelPage.username.sendKeys(ConfigReader.getProperty("CHValidUsername"));
-        qaConcortHotelPage.password.sendKeys(ConfigReader.getProperty("CHValidPassword"));
-        qaConcortHotelPage.loginAccount.click();
+        driver.findElement(By.xpath("//input[@id='UserName']")).sendKeys(ConfigReader.getProperty("CHValidUsername"));
+        driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(ConfigReader.getProperty("CHValidPassword"));
 
-        Assert.assertTrue(qaConcortHotelPage.succesLoginTextElement.isDisplayed());
+        driver.findElement(By.id("btnSubmit")).click();
 
-        Driver.closeDriver();
+        WebElement succesLoginText = driver.findElement(By.xpath("//span[text()='ListOfUsers']"));
+        Assert.assertTrue(succesLoginText.isDisplayed());
     }
 }
